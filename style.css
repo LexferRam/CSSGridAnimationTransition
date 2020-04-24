@@ -2,11 +2,13 @@
 	border-radius: 10px;
 	padding: 3px;
 	font-size: 1em;
+	margin: 0px;
 }
 
 body {
 	background: #fff;
 	color: black;
+	margin: 0px;
 }
 .contenedor {
 	width: 100vw;
@@ -125,6 +127,9 @@ body {
 	transition-property: all;
 	transition-duration: 1s;
 	transition-timing-function: ease;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 .footer:hover {
 	transform: scale(0.98);
