@@ -75,6 +75,8 @@ body {
 	transition-property: all;
 	transition-duration: 1s;
 	transition-timing-function: ease;
+	/*Flexbox*/
+	display: flex;
 }
 .contenido:hover {
 	transform: scale(0.98);
@@ -88,11 +90,7 @@ body {
 	}
 }
 .aside {
-	background: rgb(
-		255,
-		127,
-		110
-	);
+	background: #015469;
 	color: #fff;
 	grid-area: aside;
 	position: relative;
