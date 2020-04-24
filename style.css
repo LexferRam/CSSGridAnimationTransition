@@ -1,0 +1,160 @@
+* {
+	border-radius: 10px;
+	padding: 3px;
+}
+
+body {
+	background: #fff;
+	color: black;
+}
+.contenedor {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(
+		3,
+		1fr
+	);
+	grid-template-rows: repeat(
+		4,
+		1fr
+	);
+	gap: 5px;
+	grid-template-areas:
+		'header contenido contenido'
+		'aside contenido contenido'
+		'aside contenido contenido'
+		'footer footer footer';
+}
+
+.header {
+	background: darkblue;
+	color: #fff;
+	grid-area: header;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	/*animation*/
+	animation-name: header;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	/*transition*/
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+}
+.header:hover {
+	transform: scale(0.98);
+}
+@keyframes header {
+	0% {
+		top: -100%;
+	}
+	100% {
+		top: 0%;
+	}
+}
+
+.contenido {
+	background: rgb(
+		110,
+		110,
+		246
+	);
+	color: #fff;
+	grid-area: contenido;
+	position: relative;
+	animation-name: contenido;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	/*transition*/
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+}
+.contenido:hover {
+	transform: scale(0.98);
+}
+@keyframes contenido {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 0%;
+	}
+}
+.aside {
+	background: rgb(
+		255,
+		127,
+		110
+	);
+	color: #fff;
+	grid-area: aside;
+	position: relative;
+	animation-name: aside;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+}
+.aside:hover {
+	transform: scale(0.98);
+}
+@keyframes aside {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+.footer {
+	background: rgb(79, 139, 0);
+	color: #fff;
+	grid-area: footer;
+	position: relative;
+	animation-name: footer;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+}
+.footer:hover {
+	transform: scale(0.98);
+}
+@keyframes footer {
+	0% {
+		bottom: -100%;
+	}
+	100% {
+		bottom: 0%;
+	}
+}
+
+@media (max-width: 540px) {
+	.contenedor {
+		grid-template-areas:
+			'header header header'
+			'contenido contenido contenido'
+			'aside aside aside'
+			'footer footer footer';
+	}
+}
+
+@media (min-width: 540px) and (max-width: 900px) {
+	.contenedor {
+		grid-template-areas:
+			'header header header'
+			'aside contenido contenido'
+			'aside contenido contenido'
+			'footer footer footer';
+	}
+}
